@@ -9,5 +9,8 @@ def hello_world():
 @app.route("/login")
 def login():
     return render_template("login.html")
+@app.route("/handle-login", methods=["POST","GET"])
+def handle_login():
+    return "login successful"
 
 app.run(debug=True)# run the code
